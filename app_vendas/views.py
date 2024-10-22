@@ -1,3 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect
+from .models import Venda
 
-# Create your views here.
+

@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">       
+    <title>Cadastro de Produtos</title>
 </head>
 
 <style>
+:root {
+    --azul-principal: #8ccbff;
+    --azul-hover: #8ccbffa2;
+    --azul-titulos: #3c9ae7;
+    --cor-de-fundo: #F3F3F3;
+}
+
 /* Define o fundo cinza e o texto preto */
 body {
     background-color: #F3F3F3;
@@ -24,17 +31,16 @@ body {
 }
 
 .modal-content {
-    background-color: #8ccbff;
+    background-color: var(--azul-principal);
     width: 300px;
 }
 
 .list-group-item {
-    background-color: #8ccbff;
+    background-color: var(--azul-principal);
 }
 .list-group-item:hover {
-    background-color:  #8ccbffa2;
+    background-color: var(--azul-hover);
 }
-
 .nav-link {
     text-decoration: none;
     text-transform: none;
@@ -64,7 +70,6 @@ table {
 .table-group-divider {
     color: #ffffff;   
 }
-
 
 </style>
 
@@ -117,53 +122,90 @@ table {
       
 </header>
 
-<!-- Botões -->
+
 <body>
 
     <!-- Título da página -->
     <div class="position-relative m-4">
-        <h2 class="titulo">Fornecedores</h2>
-    </div>
-    
-    <!-- Botão "novo" -->
-    <div class="button-container">
-        <button type="button" class="btn btn-primary"
-        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .2rem; --bs-btn-font-size: 1.0rem;">Novo</a>
-        </button>
+        <h2 class="titulo">Cadastro de produtos</h2>
     </div>
 
-    <!-- Tabela de produtos -->
-    <div class="position-relative m-5">
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Código </th>
-                <th scope="col">Produto</th>
-                <th scope="col">Estoque</th>
-                <th scope="col">Preço de Venda</th>
-                <th scope="col">Custo</th>
-                <th scope="col">-----</th>
-              </tr>
-            </thead>
-            <tbody class="table-group-divider-shadow-lg">
-              <tr>
-                <!-- <th scope="row">1</th> -->
-                <!-- <td>Mark</td> -->
+    <!-- Formulário de cadastro -->
+    <form class="formulario row g-3">
+        <!-- Campo de descrição do produto -->
+        <div class="col-md-10">
+          <label class="form-label">Descrição</label>
+          <input name="descrição"  type="text" class="form-control" id="inputProduto">
+        </div>
+        <!-- Quantidade -->
+        <div class="col-md-2">
+            <label for="inputQuant" class="form-label">Quantidade</label>
+            <input name="quantidade"  type="number" class="form-control" id="inputQuant">
+          </div>
+        
+        <!-- Listagem de fornecedore -->  
+          <div class="col-md-6">
+            <label class="form-label">Fornecedor</label>
+           <select class="form-select" name="fornecedor">
+              <option selected></option>
+              
+              <!-- Lista de fornecedores cadastrados -->
 
-                <!-- Aqui parecerão os produtos cadastrados no estoque -->
-                
-              </tr>
-            </tbody>
-          </table>
+              <option>Amarinhos Fernandes</option>
 
-    </div>
+              
+              
+            </select>
+        </div>
 
-    
+        <!-- Listagem de fabricantes -->
+        <div class="col-md-6">
 
+            <label class="form-label">Marca</label>
+
+
+            <select class="form-select" name="marca">
+              <option selected>-</option>
+              
+              <!-- Lista de fabricantes cadastradas -->
+              <option>Desconhecido</option>
+              <option>Lista de fabricantes...</option>          
+        </select>
+
+        <!-- custo -->
+        </div>
+        <div class="col-6">
+          <label class="form-label">Custo</label>
+          <input name="custo"  type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+        </div>
+
+        <!-- Valor de venda -->
+        <div class="col-6">
+            <label class="form-label">Valor de venda</label>
+            <input  name="valor venda"   type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">  
+        </div>
+
+        <!-- % de lucro -->
+        <div class="col-md-6"> <!-- Campo de cálculo automático % de lucro -->
+            <label class="form-label">Lucro %</label>
+            <input name="lucro"  type="text" class="form-control" id="inputCity">
+        </div>
+
+        <!-- Observações -->
+        <div class="col-12">
+          <label class="form-label">Observações</label>
+          <input name="observações" type="text" class="form-control">
+        </div>
+        <div class="col-12">
+          <button type="save" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+
+      
     <!-- Bootstrap JS -->
 
     <!-- <script type="text/javascript" src="script.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        
+
 </body>
 </html>
