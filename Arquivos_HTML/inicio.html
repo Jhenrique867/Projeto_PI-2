@@ -10,12 +10,14 @@
 </head>
 
 <style>
+
 :root {
     --azul-principal: #8ccbff;
     --azul-hover: #8ccbffa2;
     --azul-titulos: #3c9ae7;
     --cor-de-fundo: #F3F3F3;
 }
+
 
 /* Define o fundo cinza e o texto preto */
 body {
@@ -31,15 +33,15 @@ body {
 }
 
 .modal-content {
-    background-color: #8ccbff;
+    background-color: var(--azul-principal);
     width: 300px;
 }
 
 .list-group-item {
-    background-color: #8ccbff;
+    background-color: var(--azul-principal);
 }
 .list-group-item:hover {
-    background-color:  #8ccbffa2;
+    background-color: var(--azul-hover);
 }
 
 .nav-link {
@@ -49,28 +51,20 @@ body {
     transition: all 0.2s;
 }
 
+/* Centraliza os botões e adiciona margens */
 .button-container {
         display: flex;
-        justify-content: end;
+        justify-content: center;
         flex-wrap: wrap;
-        padding-right: 5%;
-        margin: 0;
 }
 
 button {
         font-size: 1.2rem;
-        font-weight: bold;
-        width: 7%;
-        height: 30px;        
+        padding: 10px 20px;
+        width: 85%;
+        height: 100px;        
 }
 
-table {
-    margin: 0;
-}
-
-.table-group-divider {
-    color: #ffffff;   
-}
 
 
 </style>
@@ -126,37 +120,29 @@ table {
 
 <!-- Botões -->
 <body>
-
-    <!-- Título da página -->
-    <div class="position-relative m-4">
-        <h2 class="titulo">Saídas</h2>
-    </div>
-    
-    <!-- Tabela de produtos -->
-    <div class="position-relative m-5">
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Data</th>
-                <th scope="col">Código </th>
-                <th scope="col">Produto</th>
-                <th scope="col">Quantidade</th>
-                <th scope="col">Custo</th>
-                <th scope="col">Valor de venda</th>
-                <th scope="col">Lucro R$</th> <!-- Cáculo (Valor de venda - Custo = Lucro R$) -->
-                <th scope="col">Lucro %</th> <!-- Cáculo ((Valor de venda - Custo)*100 = Lucro %) -->
-              </tr>
-            </thead>
-            <tbody class="table-group-divider-shadow-lg">
-              <tr>
-                <!-- <th scope="row">1</th> -->
-                <!-- <td>Mark</td> -->                
-              </tr>
-            </tbody>
-          </table>
+    <div class="button-container">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="produtos.html" class="nav-link">Produtos</a></button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="entradas.html" class="nav-link">Entradas</a></button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="saidas.html" class="nav-link">Saídas</a></li></button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="vendas.html" class="nav-link">Vendas</a></button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="fabricantes.html" class="nav-link">Fabricantes</a></button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-outline-secondary shadow btn-lg m-2"><a href="usuarios.html" class="nav-link">Usuários</a></button>
+            </div>
+        </div>
     </div>
 
-    
 
     <!-- Bootstrap JS -->
 

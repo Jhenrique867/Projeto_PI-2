@@ -129,31 +129,37 @@ table {
 
     <!-- Título da página -->
     <div class="position-relative m-4">
-        <h2 class="titulo">Saídas</h2>
+        <h2 class="titulo">Usuários</h2>
     </div>
     
+    <!-- Botão "novo" -->
+    <div class="button-container">
+        <button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .2rem; --bs-btn-font-size: 1.0rem;"><a href="cadusuarios.html" class="nav-link">Novo</a>
+        </button>
+    </div>
+
     <!-- Tabela de produtos -->
     <div class="position-relative m-5">
         <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">Data</th>
-                <th scope="col">Código </th>
-                <th scope="col">Produto</th>
-                <th scope="col">Quantidade</th>
-                <th scope="col">Custo</th>
-                <th scope="col">Valor de venda</th>
-                <th scope="col">Lucro R$</th> <!-- Cáculo (Valor de venda - Custo = Lucro R$) -->
-                <th scope="col">Lucro %</th> <!-- Cáculo ((Valor de venda - Custo)*100 = Lucro %) -->
+                <th scope="col">Usuário</th>
+                <th scope="col">Nome</th>
+                <th scope="col">-----</th><!--Neste campo deverá ser incluso um botão para edição, aparecerá conforme comando JavaScript - dará link à página de cadastro do usuário-->
               </tr>
             </thead>
             <tbody class="table-group-divider-shadow-lg">
               <tr>
                 <!-- <th scope="row">1</th> -->
-                <!-- <td>Mark</td> -->                
+                <!-- <td>Mark</td> -->
+
+                <!-- Aqui parecerão os produtos cadastrados no estoque -->
+                
               </tr>
             </tbody>
           </table>
+
     </div>
 
     
