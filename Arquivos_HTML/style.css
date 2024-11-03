@@ -55,3 +55,15 @@ nav {
     padding: 0px 25vh ;
     padding-bottom: 5vh;
 }
+
+.form-container {
+    max-width: 350px;
+    padding: 1rem;
+}
+
+.modal-style {
+    width: 300px;
+    background-color: var(--azul-principal);
+    width: 300px;
+}
+

@@ -10,16 +10,9 @@
 </head>
 
 <style>
-:root {
-    --azul-principal: #8ccbff;
-    --azul-hover: #8ccbffa2;
-    --azul-titulos: #3c9ae7;
-    --cor-de-fundo: #F3F3F3;
-}
-
 /* Define o fundo cinza e o texto preto */
 body {
-    background-color: var(--cor-de-fundo);
+    background-color: #F3F3F3;
     color: black; /* Texto preto */
     height: 100vh; /* Altura total da viewport */
     justify-content: center;
@@ -110,7 +103,7 @@ table {
                         <li class="list-group-item"><a href="saidas.html" class="nav-link">Saídas</a></li>
                         <li class="list-group-item"><a href="vendas.html" class="nav-link">Vendas</a></li>
                         <li class="list-group-item"><a href="fabricantes.html" class="nav-link">Fabricantes</a></li>
-                        <li class="list-group-item"><a href="usuarios.html" class="nav-link">Usuários</a></li>
+                        <li class="list-group-item"><a href="usuarios.html" class="nav-link">Usuários</a></li></li>
                         
 
                         <li class="list-group-item"><a href="index.html" class="nav-link">Sair</a></li>
@@ -129,34 +122,36 @@ table {
 
     <!-- Título da página -->
     <div class="position-relative m-4">
-        <h2 class="titulo">Saídas</h2>
+        <h2 class="titulo">Fabricantes</h2>
     </div>
     
+    <!-- Botão "novo" -->
+    <div class="button-container">
+        <button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .2rem; --bs-btn-font-size: 1.0rem;"><a href="cadfabricante.html" class="nav-link">Novo</a>
+        </button>
+    </div>
+
     <!-- Tabela de produtos -->
     <div class="position-relative m-5">
         <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">Data</th>
                 <th scope="col">Código </th>
-                <th scope="col">Produto</th>
-                <th scope="col">Quantidade</th>
-                <th scope="col">Custo</th>
-                <th scope="col">Valor de venda</th>
-                <th scope="col">Lucro R$</th> <!-- Cáculo (Valor de venda - Custo = Lucro R$) -->
-                <th scope="col">Lucro %</th> <!-- Cáculo ((Valor de venda - Custo)*100 = Lucro %) -->
+                <th scope="col">Descrição</th>
+                <th scope="col">-----</th>
               </tr>
             </thead>
             <tbody class="table-group-divider-shadow-lg">
               <tr>
                 <!-- <th scope="row">1</th> -->
-                <!-- <td>Mark</td> -->                
+                <!-- <td>Mark</td> -->
+
+                <!-- Aqui parecerão os produtos cadastrados no estoque --> 
               </tr>
             </tbody>
           </table>
     </div>
-
-    
 
     <!-- Bootstrap JS -->
 

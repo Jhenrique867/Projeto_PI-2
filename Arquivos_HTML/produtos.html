@@ -31,17 +31,16 @@ body {
 }
 
 .modal-content {
-    background-color: #8ccbff;
+    background-color: var(--azul-principal);
     width: 300px;
 }
 
 .list-group-item {
-    background-color: #8ccbff;
+    background-color: var(--azul-principal);
 }
 .list-group-item:hover {
-    background-color:  #8ccbffa2;
+    background-color: var(--azul-hover);
 }
-
 .nav-link {
     text-decoration: none;
     text-transform: none;
@@ -71,7 +70,6 @@ table {
 .table-group-divider {
     color: #ffffff;   
 }
-
 
 </style>
 
@@ -110,8 +108,7 @@ table {
                         <li class="list-group-item"><a href="saidas.html" class="nav-link">Saídas</a></li>
                         <li class="list-group-item"><a href="vendas.html" class="nav-link">Vendas</a></li>
                         <li class="list-group-item"><a href="fabricantes.html" class="nav-link">Fabricantes</a></li>
-                        <li class="list-group-item"><a href="usuarios.html" class="nav-link">Usuários</a></li>
-                        
+                        <li class="list-group-item"><a href="usuarios.html" class="nav-link">Usuários</a></li>                        
 
                         <li class="list-group-item"><a href="index.html" class="nav-link">Sair</a></li>
                       </ul>
@@ -124,39 +121,46 @@ table {
       
 </header>
 
-<!-- Botões -->
+
 <body>
 
     <!-- Título da página -->
     <div class="position-relative m-4">
-        <h2 class="titulo">Saídas</h2>
+        <h2 class="titulo">Produtos</h2>
     </div>
     
+    <!-- Botão "novo" -->
+    <div class="button-container">
+        <button type="button" class="btn btn-primary"
+        style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .2rem; --bs-btn-font-size: 1.0rem;"><a href="cadprodutos.html" class="nav-link">Novo</a>
+        </button>
+    </div>
+
     <!-- Tabela de produtos -->
     <div class="position-relative m-5">
         <table class="table table-hover">
             <thead>
               <tr>
-                <th scope="col">Data</th>
-                <th scope="col">Código </th>
+                <th scope="col">Código </th> 
                 <th scope="col">Produto</th>
-                <th scope="col">Quantidade</th>
+                <th scope="col">Estoque</th> <!--Este campo trará o estoque atual (entradas-saídas=estoque) -->
+                <th scope="col">Preço de Venda</th>
                 <th scope="col">Custo</th>
-                <th scope="col">Valor de venda</th>
-                <th scope="col">Lucro R$</th> <!-- Cáculo (Valor de venda - Custo = Lucro R$) -->
-                <th scope="col">Lucro %</th> <!-- Cáculo ((Valor de venda - Custo)*100 = Lucro %) -->
+                <th scope="col">-----</th>  <!--Neste campo deverá ser incluso um botão para edição, aparecerá conforme comando JavaScript - dará link à página de cadastro do produto-->
               </tr>
             </thead>
             <tbody class="table-group-divider-shadow-lg">
               <tr>
                 <!-- <th scope="row">1</th> -->
-                <!-- <td>Mark</td> -->                
+                <!-- <td>Mark</td> -->
+
+                <!-- Aqui parecerão os produtos cadastrados no estoque -->
+                
               </tr>
             </tbody>
           </table>
-    </div>
 
-    
+    </div>
 
     <!-- Bootstrap JS -->
 
