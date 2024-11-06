@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'projeto_Estoque.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gestao_estoque',
+        'USER': 'root',
+        'PASSWORD':'7003',
+        'HOST':'localhost',
+        'PORT':'3306'
     }
 }
 
