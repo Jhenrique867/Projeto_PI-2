@@ -131,16 +131,20 @@ table {
     </div>
 
     <!-- Formulário de cadastro -->
-    <form class="formulario row g-3">
+    {% comment %} <form class="formulario row g-3">
         <!-- Campo de descrição do produto -->
         <div class="col-md-10">
+          <label class="form-label">Nome</label>
+          <input name="nome"  type="text" class="form-control" id="nome">
+        </div>
+        <div class="col-md-10">
           <label class="form-label">Descrição</label>
-          <input name="descrição"  type="text" class="form-control" id="inputProduto">
+          <input name="descricao"  type="text" class="form-control" id="descricao">
         </div>
         <!-- Quantidade -->
         <div class="col-md-2">
             <label for="inputQuant" class="form-label">Quantidade</label>
-            <input name="quantidade"  type="number" class="form-control" id="inputQuant">
+            <input name="quantidade"  type="number" class="form-control" id="quantidade">
           </div>
         
         <!-- Listagem de fornecedore -->  
@@ -164,7 +168,7 @@ table {
             <label class="form-label">Marca</label>
 
 
-            <select class="form-select" name="marca">
+            <select class="form-select" name="marca" id="marca">
               <option selected>-</option>
               
               <!-- Lista de fabricantes cadastradas -->
@@ -182,7 +186,7 @@ table {
         <!-- Valor de venda -->
         <div class="col-6">
             <label class="form-label">Valor de venda</label>
-            <input  name="valor venda"   type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">  
+            <input name="valor venda" id="valor_venda"  type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">  
         </div>
 
         <!-- % de lucro -->
@@ -199,6 +203,14 @@ table {
         <div class="col-12">
           <button type="save" class="btn btn-primary">Salvar</button>
         </div>
+    </form> {% endcomment %}
+    
+
+    {% comment %} por enquanto, vamos usar o formulário do Django. Mas pode tentar fazer o formulário acima depois. {% endcomment %}
+    <form action="/cadproduto/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-primary"> Salvar </button>
     </form>
 
       
