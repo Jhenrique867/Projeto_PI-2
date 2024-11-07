@@ -150,13 +150,23 @@ table {
               </tr>
             </thead>
             <tbody class="table-group-divider-shadow-lg">
-              <tr>
-                <!-- <th scope="row">1</th> -->
-                <!-- <td>Mark</td> -->
-
-                <!-- Aqui parecerão os produtos cadastrados no estoque -->
-                
+        {% if produtos %}   
+            {% for produto in produtos %}
+            <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td>{{produto.valor_produto}}</td>     
+                    <td></td>
+                    <td></td>      
               </tr>
+            {% endfor %} 
+        {% else %}
+        <tr>
+            <td colspan="5">Nenhum produto encontrado.</td>
+        </tr>
+        {% endif %}
+        
             </tbody>
           </table>
 
