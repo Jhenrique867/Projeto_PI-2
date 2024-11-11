@@ -137,6 +137,7 @@ table {
     </div>
 
     <!-- Tabela de produtos -->
+<<<<<<< HEAD
     <div class="position-relative m-5" id="table_container">
         <div class="table-responsive">
             <table class="table table-hover" aria-label="Tabela de produtos">
@@ -161,6 +162,41 @@ table {
             </table>
         </div>
             
+=======
+    <div class="position-relative m-5">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Código </th> 
+                <th scope="col">Produto</th>
+                <th scope="col">Estoque</th> <!--Este campo trará o estoque atual (entradas-saídas=estoque) -->
+                <th scope="col">Preço de Venda</th>
+                <th scope="col">Custo</th>
+                <th scope="col">-----</th>  <!--Neste campo deverá ser incluso um botão para edição, aparecerá conforme comando JavaScript - dará link à página de cadastro do produto-->
+              </tr>
+            </thead>
+            <tbody class="table-group-divider-shadow-lg">
+        {% if produtos %}   
+            {% for produto in produtos %}
+            <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                    <td>{{produto.valor_produto}}</td>     
+                    <td></td>
+                    <td></td>      
+              </tr>
+            {% endfor %} 
+        {% else %}
+        <tr>
+            <td colspan="5">Nenhum produto encontrado.</td>
+        </tr>
+        {% endif %}
+        
+            </tbody>
+          </table>
+
+>>>>>>> b4a6827bd2c1adbaed2b26f73c574ec42cc23dda
     </div>
 
     <!-- Bootstrap JS -->

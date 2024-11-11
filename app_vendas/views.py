@@ -7,4 +7,4 @@ def venda(request):
     return render(request, 'vendas/vendas.html', {'vendas': vendas})
 
 def cad_vendas(request):
-    return render(request, 'vendas/cad_vendas.html')
+    return render(request, 'vendas/cadvenda.html')
