@@ -9,6 +9,6 @@ class Venda(models.Model):
     preco = models.DecimalField(max_digits=10, decimal_places=2, null=False)
     quantidade_venda = models.IntegerField(default=0, null=False)
     total = models.DecimalField(max_digits=10, decimal_places=2, default=0, null=False)
-    total_geral = models.IntegerField(null=False)
+    total_geral = models.IntegerField(null=False, null= False)
     forma_pagamento = models.TextField(max_length=255, null=False)
     observacoes = models.TextField(max_length=255)   
