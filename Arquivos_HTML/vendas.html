@@ -96,27 +96,25 @@ table {
         <!-- Modal Barra Lateral -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Menu</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Menu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar menu"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Lista de itens do menu -->
+                        <ul class="list-group list-group-flush list-group-item-action active">
+                            <li class="list-group-item"><a href="inicio.html" class="nav-link" aria-label="Ir para a página inicial">Início</a></li>
+                            <li class="list-group-item"><a href="produtos.html" class="nav-link" aria-label="Ir para a página de produtos">Produtos</a></li>
+                            <li class="list-group-item"><a href="entradas.html" class="nav-link" aria-label="Ir para a página de entradas">Entradas</a></li>
+                            <li class="list-group-item"><a href="saidas.html" class="nav-link" aria-label="Ir para a página de saídas">Saídas</a></li>
+                            <li class="list-group-item"><a href="vendas.html" class="nav-link" aria-label="Ir para a página de vendas">Vendas</a></li>
+                            <li class="list-group-item"><a href="fabricantes.html" class="nav-link" aria-label="Ir para a página de fabricantes">Fabricantes</a></li>
+                            <li class="list-group-item"><a href="usuarios.html" class="nav-link" aria-label="Ir para a página de usuários">Usuários</a></li>
+                            <li class="list-group-item"><a href="index.html" class="nav-link" aria-label="Sair da sessão">Sair</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <!-- Lista de itens do menu -->
-                    <ul class="list-group list-group-flush list-group-item-action active">
-                        <li class="list-group-item"><a href="inicio.html" class="nav-link">Início</a></li>
-                        <li class="list-group-item"><a href="produtos.html" class="nav-link">Produtos</a></li>
-                        <li class="list-group-item"><a href="entradas.html" class="nav-link">Entradas</a></li>
-                        <li class="list-group-item"><a href="saidas.html" class="nav-link">Saídas</a></li>
-                        <li class="list-group-item"><a href="vendas.html" class="nav-link">Vendas</a></li>
-                        <li class="list-group-item"><a href="fabricantes.html" class="nav-link">Fabricantes</a></li>
-                        <li class="list-group-item"><a href="usuarios.html" class="nav-link">Usuários</a></li>
-                        
-
-                        <li class="list-group-item"><a href="index.html" class="nav-link">Sair</a></li>
-                      </ul>
-                </div>
-            </div>
             </div>
         </div>
 
@@ -141,27 +139,29 @@ table {
 
     <!-- Tabela de produtos -->
     <div class="position-relative m-5">
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Data</th>
-                <th scope="col">Nº Pedido</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Modo de pagamento</th>
-                <th scope="col">-----</th> <!--Neste campo deverá ser incluso um botão para edição, aparecerá conforme comando JavaScript - dará link à página de cadastro de entrada-->
-              </tr>
-            </thead>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col" class="min_col">Data</th>
+                    <th scope="col" class="min_col">Nº Pedido</th>
+                    <th scope="col" class="min_col">Valor</th>
+                    <th scope="col" class="min_col">Modo de pagamento</th>
+                    <th scope="col" class="min_col">-----</th> <!--Neste campo deverá ser incluso um botão para edição, aparecerá conforme comando JavaScript - dará link à página de cadastro de entrada-->
+                </tr>
+                </thead>
 
-            <tbody class="table-group-divider-shadow-lg">
-              <tr>
-                <!-- <th scope="row">1</th> -->
-                <!-- <td>Mark</td> -->
+                <tbody class="table-group-divider-shadow-lg">
+                <tr>
+                    <!-- <th scope="row">1</th> -->
+                    <!-- <td>Mark</td> -->
 
-                <!-- Aqui parecerão os produtos cadastrados no estoque -->
-                
-              </tr>
-            </tbody>
-          </table>
+                    <!-- Aqui parecerão os produtos cadastrados no estoque -->
+                    
+                </tr>
+                </tbody>
+            </table>
+        </div>   
 
     </div>
 
