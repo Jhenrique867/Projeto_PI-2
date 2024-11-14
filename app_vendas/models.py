@@ -1,7 +1,6 @@
 from django.db import models
 
 class Venda(models.Model):
-
     código_venda = models.AutoField(primary_key=True)
     código_produto = models.IntegerField()
     produto = models.TextField(max_length=255, null=False)

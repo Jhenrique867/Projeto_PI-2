@@ -132,37 +132,11 @@ table {
     <div class="button-container d-flex align-items-center">
         <button type="button" class="btn btn-primary" aria-label="Criar um novo produto"
         style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .2rem; --bs-btn-font-size: 1.0rem;">
-            <a href="cadprodutos.html" class="nav-link" alt="Novo Produto">Novo</a>
-        </button>
+        <a href="{% url 'produtos:cadastra_produtos'%}" class="nav-link" alt="Novo Produto">Novo</a>
+    </button>
     </div>
 
     <!-- Tabela de produtos -->
-<<<<<<< HEAD
-    <div class="position-relative m-5" id="table_container">
-        <div class="table-responsive">
-            <table class="table table-hover" aria-label="Tabela de produtos">
-                <thead>
-                  <tr>
-                    <th scope="col">Código </th>
-                    <th scope="col">Produto</th>
-                    <th scope="col">Estoque</th> <!--Este campo trará o estoque atual (entradas-saídas=estoque) -->
-                    <th scope="col">Preço</th> <!--Este campo trará o preço de venda -->
-                    <th scope="col">Custo</th>
-                    <th scope="col">Ação</th>  <!--Neste campo deverá ser incluso um botão para edição, aparecerá conforme comando JavaScript - dará link à página de cadastro do produto-->
-                  </tr>
-                </thead>
-                <tbody class="table-group-divider-shadow-lg">
-                  <tr>
-                                    <!-- <th scope="row">1</th> -->
-                    <!-- <td>Mark</td> -->
-                    <!-- Aqui parecerão os produtos cadastrados no estoque -->
-            
-                  </tr>
-                </tbody>
-            </table>
-        </div>
-            
-=======
     <div class="position-relative m-5">
         <table class="table table-hover">
             <thead>
@@ -181,10 +155,10 @@ table {
             <tr>
                     <td></td>
                     <td></td>
-                    <td></td> 
+                    <td>{{produto.}}</td> 
                     <td>{{produto.valor_produto}}</td>     
                     <td></td>
-                    <td></td>      
+                    <td>{{produto.Observacao}}</td>      
               </tr>
             {% endfor %} 
         {% else %}
@@ -196,7 +170,6 @@ table {
             </tbody>
           </table>
 
->>>>>>> b4a6827bd2c1adbaed2b26f73c574ec42cc23dda
     </div>
 
     <!-- Bootstrap JS -->
