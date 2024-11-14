@@ -51,8 +51,12 @@ nav {
     padding-left: 15vh;
 }
 
+.min_col{
+    min-width: 150px;
+}
+
 .formulario {
-    padding: 0px 25vh ;
+    padding: 0px 5vh ;
     padding-bottom: 5vh;
 }
 
@@ -66,4 +70,28 @@ nav {
     background-color: var(--azul-principal);
     width: 300px;
 }
+
+@media (max-width: 576px) {
+    .head {
+        margin: 0px 0px 0px 5px;
+    }
+    .bot_in {
+        min-width: 100%;
+    }
+
+    .table th:nth-child(5),
+    .table td:nth-child(5) {
+      display: none;
+    }
+
+    .button-container button {
+          justify-content: center;
+          width: 80%;
+          margin-left: 10%;
+          margin-right: 5%;
+    }
+
+    
+}
+  
 
